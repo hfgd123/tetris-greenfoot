@@ -16,7 +16,10 @@ public class Kontrollfeld extends Actor
                 
     }
 
-    public void löschen() {
-         getWorld().removeObject(getOneIntersectingObject(Block.class));
+    public void summon() {
+        int x = Greenfoot.getRandomNumber(6);
+        Block a = new Block(this);
+        getWorld().addObject(a, getX(), getY());
+        a.create(x);
     }
 }
